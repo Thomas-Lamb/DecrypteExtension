@@ -1,0 +1,28 @@
+{
+    "description": "vendre des armes facilement sur internet",
+    "manifest_version": 2,
+    "name": "Page decrypte",
+    "version": "0.0.0.1",
+    "icons": {
+        "48": "icons/icon48.png"
+    },
+    "permissions": [
+        "background",
+        "tabs",
+        "activeTab",
+        "storage",
+        "webRequest"
+    ],
+    "browser_action": {
+        "default_popup": "./popup/popup.html",
+        "default_icon": {
+            "16": "icons/icon16.png",
+            "32": "icons/icon32.png"
+        }
+    },
+    "content_scripts": [{
+        "js": ["./content_scripts/decrypte.js"],
+        "matches": ["file://*.encrypted*"]
+    }],
+    "content_security_policy": "script-src 'self' https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js; object-src 'self'"
+}
