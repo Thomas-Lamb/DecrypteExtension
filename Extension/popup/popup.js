@@ -1,12 +1,3 @@
-// chrome.chromeAction.onClicked.addListener(function(tab) {
-
-//     chrome.tabs.executeScript({
-//         code: 'var d = new Date(); d.setDate(d.getDate()+1); document.activeElement.value = d.toLocaleDateString("fr"); '
-//     });
-
-// });
-// var CryptoJS = require("crypto-js");
-
 function listenForClicks() {
 
     function resetEncryption(tabs) {
@@ -56,16 +47,6 @@ function listenForClicks() {
     document.getElementById("decrypteBtn").addEventListener("click", decrypte);
     document.getElementById("resetBtn").addEventListener("click", resetEncryption);
 
-    // if (e.target.classList.contains("decrypte")) {
-    //     console.log("decrypte");
-    //     chrome.tabs.query({ active: true, currentWindow: true })
-    //         .then(decrypte)
-    //         .catch(reportError);
-    // } else if (e.target.classList.contains("reset")) {
-    //     chrome.tabs.query({ active: true, currentWindow: true })
-    //         .then(reset)
-    //         .catch(reportError);
-    // }
 }
 
 listenForClicks();
